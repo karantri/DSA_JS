@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    let str="ana"
+
+    function ispalindrome(str){
+        let start = 0
+        let end = str.length - 1
+        let ispalindrome = true
+
+        while(start < end ){
+            if(str[start] === str [end]){
+                start++
+                end--
+                ispalindrome =true
+            }else{
+                ispalindrome =false
+                break
+            }           
+        }
+        return ispalindrome
+       }
+       console.log(ispalindrome(str))
+</script>

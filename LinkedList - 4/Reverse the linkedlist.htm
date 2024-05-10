@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reverse the linkedlist</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+
+
+<script>
+    function Node(value) {
+        this.value = value;
+        this.next = null;
+
+    }
+
+    const n1 = new Node(1)
+    const n2 = new Node(2)
+    const n3 = new Node(3)
+    const n4 = new Node(4)
+    const n5 = new Node(5)
+
+    n1.next = n2;
+    n2.next = n3;
+    n3.next = n4;
+    n4.next = n5;
+
+    function reverse(head) {
+        let curr = head;
+        let prev = null;
+
+        while (curr != null) {
+            let newNode = curr.next;
+            curr.next = prev;
+
+            prev = curr;
+            curr = newNode;
+        }
+        return prev;
+
+    }
+
+    let rev = reverse(n1)
+
+    let curr = rev;
+
+    while (curr != null) {
+        console.log(curr.value)
+        curr = curr.next
+    }
+</script>

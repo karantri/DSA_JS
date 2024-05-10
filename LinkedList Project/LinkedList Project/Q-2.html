@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> The elements of both lists are sorted, and after merging, the resulting list is also sorted.</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+
+    function Cretelinkedlist(val){
+        this.node = val
+        this.next = null
+    }
+
+    const list1 = new Cretelinkedlist(1)
+    const list2 = new Cretelinkedlist(2)
+    const list3 = new Cretelinkedlist(3)
+    const list4 = new Cretelinkedlist(4)
+    const list5 = new Cretelinkedlist(5)
+
+    list1.next = list2
+    list2.next = list3
+    list3.next = list4
+    list4.next = list5
+
+   
+    let list = list1
+    let n = 2
+    let length = 5
+    
+    function Remove(lists,remove,totalnode){
+        let n = remove
+        let cout1 = totalnode
+        let step = lists
+
+
+        while(step != null)
+        {
+            if(cout1 === n)
+            {
+                step = step.next
+            }
+            else
+            {
+                console.log(step.node)
+                step = step.next
+            }
+            cout1--
+        }
+    }
+
+    Remove(list , n , length)
+
+</script>

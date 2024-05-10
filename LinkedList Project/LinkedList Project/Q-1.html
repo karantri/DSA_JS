@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Given two sorted linked lists, merge them into a single sorted linked list.</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+
+    function Node(value)
+    {
+          this.value=value
+          this.next=null
+    }
+    function Node2(value)
+    {
+        this.value=value
+          this.next=null
+    }
+
+    const n1=new Node(1)
+    const n3=new Node(3)
+    const n5=new Node(5)
+  
+    n1.next=n3
+    n3.next=n5
+    
+
+    const n2=new Node2(2)
+    const n4=new Node2(4)
+    const n6=new Node2(6)
+
+    n2.next=n4
+    n4.next=n6
+
+
+        n1.next=n2;
+        n2.next=n3;
+        n3.next=n4;
+        n4.next=n5;
+        n5.next=n6;
+
+        let curr=n1
+
+        while(curr!=null)
+        {
+            console.log(curr.value)
+            curr=curr.next
+        }
+
+</script>

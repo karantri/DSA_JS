@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+        function binary(arr ,  target ,start , end){
+
+while(start > end ){
+    return -1;
+}
+
+let mid = Math.round((start+end)/2)
+
+if(arr[mid]===target){
+    return mid
+}
+
+if(arr[mid]<target){
+    return binary(arr ,  target ,mid+1, end)
+}
+else{
+    return binary(arr ,  target ,start, mid-1)
+}
+}
+let arr = [10, 30 , 60 , 89 , 99 , 105 , 120]
+let start = 0
+let end = arr.length - 1
+console.log(binary(arr , 8 , 0 , arr.length-1))
+</script>
