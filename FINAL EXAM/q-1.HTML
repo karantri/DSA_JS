@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+ 
+ let arr=[2,7,11,15]
+    target=9;
+
+    let twoSum = function(arr, target) {
+    let map = new Map();
+    for (let i = 0; i < arr.length; i++) {
+        let complement = target - arr[i];
+        if (map.has(complement)) {
+            return [map.get(complement), i];
+        }
+        map.set(arr[i], i);
+    }
+    return [];
+};
+console.log(twoSum(arr, target)); 
+  
+</script>

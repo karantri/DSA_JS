@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+    
+    
+function Happy(n) {
+    let num = new Set();
+    while (n !== 1 && !num.has(n)) {
+        num.add(n);
+        n = getDigitSum(n);
+    }
+    return n === 1;
+}
+
+function getDigitSum(n) {
+    let sum = 0;
+    while (n > 0) {
+        let digit = n % 10;
+        sum += digit * digit;
+        n = Math.floor(n / 10);
+    }
+    return sum;
+}
+console.log(Happy(19) + " It is HAPPY Number ");
+</script>
